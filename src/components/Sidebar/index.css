@@ -1,0 +1,4 @@
+.sider :global(.ant-layout-sider-children) {
+  overflow: auto;
+  background: #000C17;
+}

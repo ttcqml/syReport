@@ -1,0 +1,62 @@
+@charset "utf-8";
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #ccc;
+}
+
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-corner {
+    background: #fafafa;
+    border-right: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    overflow: auto;
+}
+
+.csgl .ant-form-item-label {
+    text-align: left;
+}
+
+.csgl .ant-form-item-label > label {
+    margin-left: 60px;
+}
+
+.csgl .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+    content: "（必填）";
+    position: absolute;
+    left: -60px;
+}
+
+.csglpc .ant-modal-body {
+    margin-top: 50px;
+}
+
+.ellipsis {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ant-table-tbody > tr:nth-child(odd) > td {
+    background-color: #FAFAFA;
+}
+
+.ant-table-tbody > tr:nth-child(even) > td {
+    background-color: #ffffff;
+}
+
+.mygl {
+    padding: 30px 20px;
+}

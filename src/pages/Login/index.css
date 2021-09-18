@@ -1,0 +1,26 @@
+.form {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.name{
+  height: 50px;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card{
+  width:500px;
+  height: 310px;
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: #FFFFFF;
+}

@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "jsx": "react",
+    "paths": {
+      "js/*": [
+        "src/assets/js/*"
+      ],
+      "img/*": [
+        "src/assets/img/*"
+      ],
+      "oss/*": [
+        "src/assets/oss/*"
+      ],
+      "libs/*": [
+        "src/libs/*"
+      ],
+      "components/*": [
+        "src/components/*"
+      ],
+      "pages/*": [
+        "src/pages/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    ".svn",
+    ".git"
+  ]
+}
