@@ -49,13 +49,13 @@
     text-overflow: ellipsis;
 }
 
-.ant-table-tbody > tr:nth-child(odd) > td {
+/*.ant-table-tbody > tr:nth-child(odd) > td {
     background-color: #FAFAFA;
 }
 
 .ant-table-tbody > tr:nth-child(even) > td {
     background-color: #ffffff;
-}
+}*/
 
 .mygl {
     padding: 30px 20px;

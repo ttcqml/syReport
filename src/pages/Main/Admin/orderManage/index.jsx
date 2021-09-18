@@ -3,7 +3,9 @@ import {get, post} from 'libs/request';
 import moment from 'moment';
 import {Form, Input, Button, Table, Divider, DatePicker, Select} from 'antd';
 import {toString, getUniqKey, formatDate, toMap, saveBlob} from 'libs/util';
+import TableDetail from "./tabledetail";
 const {RangePicker} = DatePicker;
+
 
 export default class extends Component {
   constructor(props) {
@@ -150,6 +152,10 @@ export default class extends Component {
         loading={tableLoading}
         bordered
         dataSource={data}
+        defaultExpandedRowKeys={[0]}
+        expandedRowRender={(record) => {
+            return <TableDetail data={record.orderDetailVos || []}/>
+        }}
         rowKey="rowKey"
         onChange={ p => {
           this.defParam = {...this.defParam, pageNo: p.current, pageSize: p.pageSize};
@@ -279,6 +285,12 @@ export default class extends Component {
               dataIndex: 'actualPayment',
               align: 'center',
               width: 100
+            },
+            {
+                title: '是否会员订单',
+                dataIndex: 'isMember',
+                align: 'center',
+                width: 100
             },
           {
            title: '记录时间',
