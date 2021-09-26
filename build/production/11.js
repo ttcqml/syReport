@@ -6208,12 +6208,57 @@ var table = __webpack_require__(393);
 // EXTERNAL MODULE: ./src/libs/util.js
 var util = __webpack_require__(96);
 
+// CONCATENATED MODULE: ./src/pages/Main/Admin/orderManage/tabledetail.jsx
+
+
+const tabledetail_columns = [{
+  title: '序号',
+  dataIndex: 'key',
+  align: 'center',
+  width: 10,
+  render: (text, record, index) => index + 1
+}, {
+  title: '商品名称',
+  dataIndex: 'prdName',
+  align: 'center',
+  width: 100
+}, {
+  title: '数量',
+  dataIndex: 'num',
+  align: 'center',
+  width: 40
+}, {
+  title: '实付金额',
+  dataIndex: 'totalFee',
+  align: 'center',
+  width: 40
+}];
+/* harmony default export */ var tabledetail = (class extends react["Component"] {
+  render() {
+    return /*#__PURE__*/react_default.a.createElement("div", {
+      style: {
+        width: 1200
+      }
+    }, /*#__PURE__*/react_default.a.createElement(table["a" /* default */], {
+      columns: tabledetail_columns,
+      dataSource: this.props.data,
+      size: "small",
+      pagination: false,
+      bordered: true,
+      rowKey: (record, index) => {
+        return record.wineRecordDetailId;
+      }
+    }));
+  }
+
+});
 // CONCATENATED MODULE: ./src/pages/Main/Admin/orderManage/index.jsx
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -6415,6 +6460,12 @@ const {
       loading: tableLoading,
       bordered: true,
       dataSource: data,
+      defaultExpandedRowKeys: [0],
+      expandedRowRender: record => {
+        return /*#__PURE__*/react_default.a.createElement(tabledetail, {
+          data: record.orderDetailVos || []
+        });
+      },
       rowKey: "rowKey",
       onChange: p => {
         this.defParam = _objectSpread(_objectSpread({}, this.defParam), {}, {
@@ -6501,6 +6552,16 @@ const {
         align: 'center',
         width: 100
       }, {
+        title: '下单店铺',
+        dataIndex: 'orderKdtName',
+        align: 'center',
+        width: 100
+      }, {
+        title: '是否B店首单',
+        dataIndex: 'isFirstOrder',
+        align: 'center',
+        width: 100
+      }, {
         title: '订单创建时间',
         dataIndex: 'created',
         align: 'center',
@@ -6531,6 +6592,11 @@ const {
       }, {
         title: '实付金额',
         dataIndex: 'actualPayment',
+        align: 'center',
+        width: 100
+      }, {
+        title: '是否会员订单',
+        dataIndex: 'isMember',
         align: 'center',
         width: 100
       }, {

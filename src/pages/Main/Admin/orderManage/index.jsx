@@ -247,6 +247,18 @@ export default class extends Component {
             align: 'center',
             width: 100
           },
+            {
+                title: '下单店铺',
+                dataIndex: 'orderKdtName',
+                align: 'center',
+                width: 100
+            },
+            {
+                title: '是否B店首单',
+                dataIndex: 'isFirstOrder',
+                align: 'center',
+                width: 100
+            },
           {
             title: '订单创建时间',
             dataIndex: 'created',
